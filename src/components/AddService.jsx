@@ -3,14 +3,17 @@ import { addServiceToServer } from "../data/server/servicesServer";
 
 const AddService = () => {
 
-    const [newService,setNewService] = useState({});
+    const [newService, setNewService] = useState({});
 
-    function changeProp(){
+    function changeProp(e) {
         //copy from state form example
-        //setNewService();
+        setNewService({
+            ...newService,
+            [e.target.id]: e.target.value
+        });
     }
 
-    function handleAddService(){
+    function handleAddService() {
         addServiceToServer(newService);
     }
 
