@@ -1,4 +1,5 @@
 //mobX
+// import {makeObservable} from 'mobx';
 
 class servicesStore {
     services = [];
